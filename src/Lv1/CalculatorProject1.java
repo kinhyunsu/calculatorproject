@@ -40,6 +40,15 @@ public class CalculatorProject1 {
                 return;
         }
         System.out.println("결과입니다 ! : " + result);
+        while(true){
+            System.out.println("exit를 누르면 종료됩니다.");
+            String input = scanner.next();
+            if (input.equals("exit")){
+                System.out.println("프로그램을 종료합니다.");
+                break;
+            }
+        }
+
 
     }
 }
