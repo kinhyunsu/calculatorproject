@@ -7,10 +7,14 @@ public class CalculatorProject1 {
 
 
         while(true) {
-            System.out.println("exit를 누르면 종료되며 아무키나 입력하시면 실행됩니다.");
+            System.out.println("명령어를 입력해주세요 :");
             String input = scanner.next();
-            if (input.equals("exit")) {
+            if (input.equals("go")) {
+                System.out.println("프로그램을 시작합니다.");
+            }else if (input.equals("exit")){
                 System.out.println("프로그램을 종료합니다.");
+            }else {
+                System.out.println("알 수 없는 명령어입니다.");
                 break;
             }
 
@@ -40,7 +44,7 @@ public class CalculatorProject1 {
                     if (num2 != 0) {
                         result = num1 / num2;
                     } else {
-                        System.out.println("0으로 나눌 수 없습니다!");
+                        System.out.println("나눗셈 연산에서 분모(두번 째 정수)에 0이 입력될 수 없습니다!");
                     }
 
                 default:
@@ -49,6 +53,7 @@ public class CalculatorProject1 {
                     return;
             }
             System.out.println("결과입니다 ! : " + result);
+            System.out.println("더 계산하시겠습니까? (exit를 입력 시 종료되며 다른 키 입력 시 실행됩니다.)");
         }
 
     }
