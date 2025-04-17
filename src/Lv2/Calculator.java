@@ -4,7 +4,7 @@ import java.util.Queue;
 import java.util.ArrayDeque;
 
 public class Calculator {
-    final private Queue<Integer> resultList = new ArrayDeque<>();
+    private Queue<Integer> resultList = new ArrayDeque<>();
 
     public int calculator(int num1, int num2, char opertor) {
         int result;

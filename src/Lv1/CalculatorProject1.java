@@ -11,11 +11,11 @@ public class CalculatorProject1 {
             String input = scanner.next();
             if (input.equals("go")) {
                 System.out.println("프로그램을 시작합니다.");
-            }else if (input.equals("exit")){
+            } else if (input.equals("exit")){
                 System.out.println("프로그램을 종료합니다.");
-            }else {
-                System.out.println("알 수 없는 명령어입니다.");
                 break;
+            } else {
+                System.out.println("알 수 없는 명령어입니다.");
             }
 
             System.out.println("첫 번째 정수를 입력해주세요 ! :");
