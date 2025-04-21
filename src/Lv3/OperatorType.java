@@ -7,14 +7,10 @@ public enum OperatorType {
     MULTIPLY('*'),
     DIVIDE('/');
 
-    private final char symbol;
+    final private char symbol;
 
     OperatorType(char symbol) {
         this.symbol = symbol;
-    }
-
-    public char getSymbol() {
-        return symbol;
     }
 
     public static OperatorType fromChar(char ch) {

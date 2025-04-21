@@ -36,8 +36,7 @@ public class ArithmeticCalculator<T extends Number> {
         if (!resultList.isEmpty()) {
             return resultList.poll();
         } else {
-            System.out.println("저장된 결과가 없습니다.");
-            return null;
+            throw new IllegalStateException("저장된 결과가 없습니다.");
         }
     }
 
