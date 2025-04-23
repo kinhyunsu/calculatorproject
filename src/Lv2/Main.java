@@ -1,6 +1,7 @@
 package Lv2;
 
 import java.util.InputMismatchException;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class Main {
@@ -8,7 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Calculator calculator = new Calculator();
 
-        System.out.println("명령어를 입력해주세요 (go, exit, delete, list) :");
+        System.out.print("명령어를 입력해주세요 (go, exit, delete, list) :");
         while(true){
             try {
                 String input = scanner.next();
@@ -21,23 +22,24 @@ public class Main {
                     System.out.println("현재 저장된 결과 리스트");
                     System.out.println(calculator.getResultList());
                 } else if (input.equals(("delete"))) {
-                    Integer removed = calculator.removeResult();
+                    Optional<Integer> removed = calculator.removeResult();
+                    System.out.println("삭제되었습니다.");
                     continue;
                 } else {
                     System.out.println("알 수 없는 명령어입니다.");
-                    break;
+                    continue;
                 }
-                System.out.println("첫 번째 수를 입력해주십쇼  :");
+                System.out.print("첫 번째 수를 입력해주십쇼  :");
                 int num1 = scanner.nextInt();
 
                 if ( num1 < 0){
                     System.out.println("음수는 입력할 수 없습니다");
                     continue;
                 }
-                System.out.println("사칙연산 기호를 입력해주십쇼 :");
+                System.out.print("사칙연산 기호를 입력해주십쇼 :");
                 char operator = scanner.next().charAt(0);
 
-                System.out.println("두 번째 수를 입력해주십쇼 : ");
+                System.out.print("두 번째 수를 입력해주십쇼 : ");
                 int num2 = scanner.nextInt();
                 if ( num2 < 0){
                     System.out.println("두 번째 수도 음수 입력은 불가합니다 ");

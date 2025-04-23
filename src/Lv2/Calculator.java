@@ -2,6 +2,7 @@ package Lv2;
 
 import java.util.Queue;
 import java.util.ArrayDeque;
+import java.util.Optional;
 
 
 
@@ -37,12 +38,12 @@ public class Calculator {
         return resultList;
 
     }
-    public Integer removeResult(){
+    public Optional<Integer> removeResult(){
         if(!resultList.isEmpty()){
-            return resultList.poll();
+            return Optional.of(resultList.poll());
         }else{
             System.out.println("저장된 결과가 없습니다.");
-            return null;
+            return Optional.empty();
         }
     }
 }
